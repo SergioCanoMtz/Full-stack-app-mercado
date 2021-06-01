@@ -1,11 +1,11 @@
 *{
-    font-family: 'Oswald',sans-serif;
+    /* font-family: 'Oswald',sans-serif; */
 }
 
 body{
-    background: #f5f6f5;
-    font-family: 'Oswald',sans-serif;
-    overflow: hidden;
+    background: #fff;
+    /* font-family: 'Oswald',sans-serif; */
+    
 }
 
 .index{
@@ -26,7 +26,7 @@ body{
 }
 
 .masthead h1{
-    font-size: 4rem;
+    /* font-size: 4rem; */
     margin: 0;
     padding: 0;
 }

@@ -6,7 +6,7 @@ header{
     position: fixed;
     transform: scale(1,1);
     transition-duration: .7s; 
-    z-index: 10;
+    z-index: 12;
 }
 
 .minimo{
@@ -45,8 +45,12 @@ header{
     font-family: 'Roboto-Bold', sans-serif;
 }
 
-.contenedor .logo .texto h1{font-size: 40px;}
-.contenedor .logo .texto h2{font-size: 30px;}
+.contenedor .logo .texto h1{
+    font-size: 40px;
+    margin: 0;
+}
+.contenedor .logo .texto h2{font-size: 30px;
+    margin: 0;}
 
 .contenedor .logo .texto .derecha{
     transform: translate(170px,-23px);

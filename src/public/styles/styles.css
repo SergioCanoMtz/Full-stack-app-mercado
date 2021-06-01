@@ -52,7 +52,7 @@
     top: 400px;
     border-radius: 50px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 11;
 }
 
 .scroll-down::before,
@@ -148,7 +148,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2px auto;
+    margin: 0 auto;
     padding: 0 100px;
     color: #000;
 }
@@ -156,8 +156,13 @@
 .main .ultimaSeccion img{
     width: 30%;
     position: relative;
-    bottom: 95px;
+    bottom: 40px;
     margin-left: 85px;
+}
+
+footer{
+    position: relative !important;
+    top: 75px !important;
 }
 
 /* Responsive (FALTA MUCHOOOOO!!!!!) */
