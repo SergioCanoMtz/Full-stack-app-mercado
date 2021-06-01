@@ -1,0 +1,96 @@
+/* HEADER */
+
+header{
+	width: 100%;
+    background:#fff;
+    position: fixed;
+    transform: scale(1,1);
+    transition-duration: .7s; 
+    z-index: 10;
+}
+
+.minimo{
+    transform: scale(.9,.9);
+    background:rgba(255, 255, 255, 0.966);
+    border-radius: 15px;
+    transition-duration: .7s; 
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.425);
+}
+
+.contenedor{
+	width: 97%;
+    margin: 0px auto; 
+	display: flex;
+	justify-content:space-between; 
+	align-items: center;
+}
+
+.contenedor .logo{
+    display: flex;
+	align-items: center;
+}
+    
+.contenedor .logo img{
+    width: 20%;
+    transform: scale(1,1);
+    transition-duration: .7s;
+}
+
+.contenedor .logo .pequeno{
+    transform: scale(.8,.8);
+    transition-duration: .7s;
+}
+
+.contenedor .logo .texto{
+    font-family: 'Roboto-Bold', sans-serif;
+}
+
+.contenedor .logo .texto h1{font-size: 40px;}
+.contenedor .logo .texto h2{font-size: 30px;}
+
+.contenedor .logo .texto .derecha{
+    transform: translate(170px,-23px);
+    transition-duration: 1s;
+}
+
+.contenedor .logo .texto .abajo{
+    transform: translate(0,20px);
+    transition-duration: 2s;
+}
+
+.contenedor .logo .texto .regreso{
+    transform: translate(0,0px);
+    transition-duration: 1s;
+}
+
+.contenedor .logo .texto .back{
+    transform: translate(0,0px);
+    transition-duration: 2s;
+}
+
+.contenedor .menu a{
+    padding: 5px 7px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    color: black;
+
+}
+
+.contenedor .menu a:hover, 
+.contenedor .menu a.active{
+    background-color: #1e5b8d;
+    color: #fff;
+    border-radius: 3px;
+    transition: .8s;
+}
+
+header .contenedor .bar{
+    color: black;
+    width: 25px;
+    height: 25px;
+    font-size: 28px;
+    margin-right: 20px;
+    display: none;
+    z-index:20;
+}

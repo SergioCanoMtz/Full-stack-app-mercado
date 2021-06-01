@@ -1,0 +1,341 @@
+@import url("fonts.css");
+@import url('universal.css');
+
+header{
+	width: 100%;
+    background:#fff;
+    position: fixed;
+    transform: scale(1,1);
+    transition-duration: .7s; 
+    z-index: 10; 
+}
+
+.minimo{
+    transform: scale(.9,.9);
+    background:rgba(255, 255, 255, 0.966);
+    border-radius: 15px;
+    transition-duration: .7s; 
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.425);
+}
+
+.contenedor{
+	width: 97%;
+    margin: 0px auto; 
+	display: flex;
+	justify-content:space-between; 
+	align-items: center;
+}
+
+.contenedor .logo{
+    display: flex;
+	align-items: center;
+}
+    
+.contenedor .logo img{
+    width: 20%;
+    /* margin-right: 10px;  */
+    transform: scale(1,1);
+    transition-duration: .7s;
+}
+
+.contenedor .logo .pequeno{
+    transform: scale(.8,.8);
+    transition-duration: .7s;
+}
+
+.contenedor .logo .texto{
+    font-family: 'Roboto-Bold', sans-serif;
+}
+
+.contenedor .logo .texto h1{font-size: 40px;}
+.contenedor .logo .texto h2{font-size: 30px;}
+
+.contenedor .logo .texto .derecha{
+    transform: translate(170px,-23px);
+    transition-duration: 1s;
+}
+
+.contenedor .logo .texto .abajo{
+    transform: translate(0,20px);
+    transition-duration: 2s;
+}
+
+.contenedor .logo .texto .regreso{
+    transform: translate(0,0px);
+    transition-duration: 1s;
+}
+
+.contenedor .logo .texto .back{
+    transform: translate(0,0px);
+    transition-duration: 2s;
+}
+
+.contenedor .menu a{
+    padding: 5px 7px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    color: black;
+
+}
+
+.contenedor .menu a:hover, 
+.contenedor .menu a.active{
+    background-color: #1e5b8d;
+    color: #fff;
+    border-radius: 3px;
+    transition: .8s;
+}
+
+header .contenedor .bar{
+    color: black;
+    width: 25px;
+    height: 25px;
+    font-size: 28px;
+    margin-right: 20px;
+    display: none;
+    z-index:20;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+    
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    position: relative;
+    bottom: -100px;
+}
+
+.item{
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.095);
+    transition: all 300ms;
+    position: relative;
+}
+  
+.item::after {
+    content: "";
+    background-color: rgba(179, 229, 252, .1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    opacity: 0;
+}
+  
+.item:hover:after{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item-text{
+  padding: 1em;
+  font-family: "Roboto-Regular";
+}
+
+.item-text p{
+    display: none;
+}
+  
+  
+.item-img{
+  max-width: 100%;
+  display: block;
+
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+}
+
+.vermas{
+  background:#0B3253;
+  color: #fff;
+  border: none;
+  padding: 5px 10px ;
+  border-radius: 6px;
+  margin: 10px auto;
+  margin-top: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+.modal{
+	background: rgba(0,0,0,.8);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+}
+
+.modal .todo{
+	background: #f8f8f8;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,.9);
+	border-radius: 4px;
+	margin: 150px auto;
+	padding: 20px;
+	width: 900px;
+    position: relative;
+    bottom: 55px;
+    z-index: 21;
+}
+
+.modal .todo .pop{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal .todo a{
+	font-size: 25px;
+	line-height: 16px;
+	display: block;
+	text-align: right;
+	color: #000;
+	transition:  .3s ease all;
+}
+
+.modal .todo a:hover {
+	color: #0B3253;
+}
+
+.modal .todo .pop img{
+	width: 70%;
+	border-radius: 4px;
+}
+
+.modal .todo .pop .infor{
+	margin: 0 15px;
+    font-family: "Poppins";
+}
+
+.modal .todo .pop .infor h2{
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+.modal .todo .pop .infor h4{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+
+footer {
+    width: 100%;
+    height: 50px;
+    background: #0B3253;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: -85px;
+    z-index: 20;
+}
+
+.pie-hidden{
+    display: none;
+}
+
+footer .derechos{
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+  
+  
+  @media screen and (min-width: 590px) {
+    
+    .container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }
+  
+  @media screen and (min-width: 960px) {
+    
+    .container{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+  }
+
+@media screen and (max-width:1180px){
+    header .contenedor .logo .texto{
+        transform: scale(0.7);
+    }
+}
+
+
+
+@media screen and (max-width:990px){
+    header .contenedor .bar{
+        display: block;
+
+    }
+    header .contenedor .menu {  
+        display: none;  
+        position: fixed;
+        width: 100%;
+        background: #fff;
+        top: 80px;
+        left: 0;
+        text-align: center;
+        z-index: 12;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.425);
+    }
+
+    header .contenedor .menu a{
+        display: block;
+        width: 70%;
+        margin: 10px auto;
+    }
+
+    header .contenedor .show{
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width:675px){
+
+    header .contenedor .menu{
+        margin: 10 auto;
+        
+    }
+
+    header .contenedor .menu a{
+        font-size: 1em;
+    }
+}
+
+
+@media screen and (max-width:370px){
+    .contenedor .logo .texto .derecha{
+        transform: translate(45px,0);
+        transition-duration: 1s;
+    }
+    
+    .contenedor .logo .texto .abajo{
+        transform: translate(30px,0);
+        transition-duration: 2s;
+    }
+}
+

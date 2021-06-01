@@ -1,0 +1,279 @@
+@import url("fonts.css");
+@import url('universal.css');
+@import url('header.css');
+@import url('footer.css');
+
+@keyframes scroll-down {
+    0% {opacity: 0;}
+    30% {opacity: 1;}
+    60% {opacity: 1;}
+    100% {
+        top: 90%;
+        opacity: 0;
+    }
+}
+ 
+/* ---------------MAIN------------ */
+
+.main .mercadoPortada{
+    background: url('../img/img1.jpg');
+    background-color: rgba(0, 0, 0, 0.384);
+    background-blend-mode: soft-light;
+    background-attachment:fixed; 
+    height: 500px; 
+
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main .mercadoPortada .descrip {
+    color: #fff; 
+    width: 50%;
+    margin-right: 40px;
+    text-align: justify;
+    font-family:'Roboto-Bold';
+    text-shadow:10px 10px 10px rgb(0 0 0);
+}
+
+.main .mercadoPortada .descrip .titulo{ font-size: 70px; }
+.main .mercadoPortada .descrip .resumen{font-size: 30px;}
+.main .logoGrande{ width: 15%; }
+
+/* Main - estilos del scrolldown */
+.main .mercadoPortada a .scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    top: 400px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 2px solid rgb(255, 255, 255);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::before {
+    top: 30%;
+    animation-delay: 0.3s;
+}
+
+/* linea curveada blanca */
+.main .blanco{
+    position: absolute;
+    top: 375px;
+    z-index: 9;
+    width: 100%;
+}
+ 
+/* estilos de la segunda seccion */
+
+.segundaSeccion {
+    height: 400px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px auto;
+}
+
+.segundaSeccion  img{
+    width: 35%;
+    border-radius: 13px;
+}
+
+.segundaSeccion .contenedorInfo{
+    width: 60%;
+    padding: 10px;
+    margin: 0 50px;
+}
+
+.segundaSeccion .contenedorInfo .titulo1,
+.terceraSeccion .contenedorInfo .titulo1,
+.ultimaSeccion .contenedorInfo .titulo1{
+    font-size: 3.5em;
+    font-family: "Roboto-Bold";
+    text-align: center;
+}
+
+.segundaSeccion .contenedorInfo .descripcionTitulo,
+.terceraSeccion .contenedorInfo .descripcionTitulo,
+.ultimaSeccion .contenedorInfo .descripcionTitulo{
+    font-size: 25px;
+    text-align: center;
+    font-family: "Roboto-Regular";
+}
+
+.main .terceraSeccion{
+    background: url('../img/secciontres-BG.png');
+    height: 635px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px auto;
+    padding: 0 100px;
+    color: #fff;
+}
+
+.main .terceraSeccion img{
+    width: 40%;
+    position: relative;
+    bottom: 95px;
+}
+
+.main .ultimaSeccion{
+    background:rgb(255, 255, 255);
+    height: 400px;
+    z-index: 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px auto;
+    padding: 0 100px;
+    color: #000;
+}
+
+.main .ultimaSeccion img{
+    width: 30%;
+    position: relative;
+    bottom: 95px;
+    margin-left: 85px;
+}
+
+/* Responsive (FALTA MUCHOOOOO!!!!!) */
+
+
+@media screen and (max-width:1180px){
+    header .contenedor .logo .texto{
+        transform: scale(0.7);
+    }
+
+    .main .blanco {
+        top: 400px;
+    }
+
+    .main .mercadoPortada .descrip,
+    .segundaSeccion .contenedorInfo .titulo1 {
+        font-size: 1em;
+    }
+
+    .segundaSeccion .contenedorInfo .descripcionTitulo {
+        font-size: 15px;
+    }
+
+    .main .mercadoPortada a .scroll-down {   
+        z-index: 0;
+    }
+}
+
+
+
+@media screen and (max-width:990px){
+    header .contenedor .bar{
+        display: block;
+
+    }
+    header .contenedor .menu {  
+        display: none;  
+        position: fixed;
+        width: 100%;
+        background: #fff;
+        top: 80px;
+        left: 0;
+        text-align: center;
+        z-index: 12;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.425);
+    }
+
+    header .contenedor .menu a{
+        display: block;
+        width: 70%;
+        margin: 10px auto;
+    }
+
+    header .contenedor .show{
+        display: block;
+    }
+
+    .minimo{
+        border-radius: 15px 15px 0 0;
+        background:#fff;
+    }
+
+    .main .mercadoPortada a .scroll-down {   
+        z-index: 0;
+    } 
+}
+
+@media screen and (max-width:950px){
+    .main .blanco {
+        top: 415px;
+    }
+}
+
+@media screen and (max-width:850px){
+    .main .blanco {
+        top: 430px;
+    }
+}
+
+@media screen and (max-width:675px){
+    .main .blanco {
+        top: 445px;
+    }
+
+    header .contenedor .menu{
+        margin: 10 auto;
+        
+    }
+
+    header .contenedor .menu a{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:520px){
+    .main .blanco {
+        top: 460px;
+    }
+}
+
+@media screen and (max-width:370px){
+    .contenedor .logo .texto .derecha{
+        transform: translate(45px,0);
+        transition-duration: 1s;
+    }
+    
+    .contenedor .logo .texto .abajo{
+        transform: translate(30px,0);
+        transition-duration: 2s;
+    }
+}
+
+
+@media screen and (max-width:380px){
+    .main .blanco {
+        top: 470px;
+    }
+}

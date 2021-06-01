@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/21e95ae838.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/galeria.css">
+    <link rel="icon" href="img/logo.ico">
+    <title>Galería</title>
+</head>
+<body>
+    <header id="minimo" class="">
+        <div class="contenedor" >
+            <div class="logo">
+                <img src="img/logo.png" id="logo" alt="logo del mercado municipal">
+                <div class="texto">
+                    <h1 id="abajo">MERCADO</h1>
+                    <h2  id="derecha">MUNICIPAL</h2>
+                </div>
+            </div>
+            <nav class="menu" id="opc">
+                <a href="index.html" >Inicio</a>
+                <a href="caracteristicas.html">Características</a>
+                <a href="galeria.html" class="active" id='active'>Galería</a>
+                <a href="mercados.html">Ubicación</a>
+                <a href="acerca.html">Acerca de..</a>  
+            </nav>
+            <div class="bar" > 
+                <i id="ver" class="bas fas fa-bars" id=""></i>                       
+            </div>
+        </div>    
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="item" name="item" onclick='openModal(0)'>
+                <img src="img/3.jpg" class="item-img">
+                <div class="item-text">
+                    <h3>San Bartolomé Ayautla</h3>
+                    <p>Mercado municipal, Frutas y verduras "El poblano".</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div>  
+            </div>
+            
+            <div class="item" name="item" onclick='openModal(1)'>
+                <img src="img/5.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>San Bartolomé Ayautla</h3>
+                    <p>Artesanias hechas a mano, Huipil, Blusas, canastas y más.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div> 
+            </div>
+
+            <div class="item" name="item" onclick='openModal(2)'>
+                <img src="img/6t.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>San Juan Bautista Cuicatlán</h3>
+                    <p>Variedad de frutas y verduras frescas.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div> 
+            </div>
+
+            <div class="item" name="item" onclick='openModal(3)'>
+                <img src="img/7.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>San Juan Bautista Cuicatlán</h3>
+                    <p>Recuerdos Artesanales, Bolsas, morrales, etc.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div>      
+            </div>
+
+            <div class="item" name="item" onclick='openModal(4)'>
+                <img src="img/temp1.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>Teotitlán de Flores Magón.</h3>
+                    <p>Agricultores locales, vendiendo sus propias cosechas.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div> 
+            </div>
+
+            <div class="item" name="item" onclick='openModal(5)'>
+                <img src="img/14t.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>Teotitlán de Flores Magón.</h3>
+                    <p>Agricultores locales, vendiendo sus propias cosechas.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div>  
+            </div>
+
+            <div class="item" name="item" onclick='openModal(6)'>
+                <img src="img/15.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>San Antonio Nanahuatípam.</h3>
+                    <p>Comerciantes locales vendiendo carne.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div>   
+            </div>
+
+            <div class="item" name="item" onclick='openModal(7)'>
+                <img src="img/8.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>San Sebastián Zinacatepec.</h3>
+                    <p>Vista exterior del mercado municipal.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div> 
+            </div>
+
+            <div class="item" name="item" onclick='openModal(8)'>
+                <img src="img/9.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>San Sebastián Zinacatepec.</h3>
+                    <p>Zona de venta en el interior del mercado.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas" >Ver más</button>
+                </div> 
+            </div>
+
+            <section class="modal" id='modal'>
+                <div class="todo">
+                    <a href="#" class="cerrar" onclick="closeModal();"><i class="fa fa-times"></i></a>
+                    <div class="pop">
+                        <img id="image">
+                        <div class="infor">
+                            <h2 id="product"></h2>
+                            <h4 id="antes"></h4>	
+                        </div>
+                    </div>		
+                </div>
+            </section>
+    </section>
+
+    <footer id="pie">
+        <section class="derechos">
+            © Todos los Derechos Reservados 2021 | Mercado Municipal
+        </section>
+    </footer>
+
+    <script src="js/scroll.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>
