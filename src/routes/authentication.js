@@ -43,4 +43,20 @@ router.post('/signup', (req, res) =>{
 
 });
 
+router.get('/acerca', (req, res) => {
+    res.render('acerca');
+})
+
+router.get('/caracteristicas', (req, res) => {
+    res.render('caracteristicas');
+})
+
+router.get('/galeria', (req, res) => {
+    res.render('galeria')
+})
+
+router.get('/mercados', (req, res) => {
+    res.render('mercados')
+})
+
 module.exports = router;
