@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+{{!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="/">Links favoritos</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,4 +34,47 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> --}}
+
+<header id="minimo" class="">
+    {{#if user}}
+     <div class="contenedor" >
+        <div class="logo">
+            <img src="img/logo.png" id="logo" alt="logo del mercado municipal">
+            <div class="texto">
+                <h1 id="abajo">MERCADO</h1>
+                <h2  id="derecha">MUNICIPAL</h2>
+            </div>
+        </div>
+        <nav class="menu" id="opc">
+            <a href="/profile">Mi perfil</a>
+            <a href="/links/add">Agregar Producto</a>
+            <a href="/logout">Cerrar Sesion</a>
+        </nav>
+        <div class="bar" > 
+            <i id="ver" class="bas fas fa-bars" id=""></i>                       
+        </div>
+    </div>
+    {{else}}
+    <div class="contenedor" >
+        <div class="logo">
+            <img src="img/logo.png" id="logo" alt="logo del mercado municipal">
+            <div class="texto">
+                <h1 id="abajo">MERCADO</h1>
+                <h2  id="derecha">MUNICIPAL</h2>
+            </div>
+        </div>
+        <nav class="menu" id="opc">
+            <a href="/">Inicio</a>
+            <a href="/caracteristicas">Características</a>
+            <a href="/galeria">Galería</a>
+            <a href="/mercados">Ubicación</a>
+            <a href="/acerca">Acerca de..</a>
+            <a href="/signin">Acceder</a>
+        </nav>
+        <div class="bar" > 
+            <i id="ver" class="bas fas fa-bars" id=""></i>                       
+        </div>
+    </div>
+    {{/if}}     
+</header>

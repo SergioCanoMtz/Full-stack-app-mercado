@@ -1,0 +1,119 @@
+    <link rel="stylesheet" href="styles/galeria.css">
+    <title>Galería</title>
+
+    <section>
+        <div class="container">
+            <div class="item" name="item" onclick='openModal(0)'>
+                <img src="img/3.jpg" class="item-img">
+                <div class="item-text">
+                    <h3>San Bartolomé Ayautla</h3>
+                    <p>Mercado municipal, Frutas y verduras "El poblano".</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div>  
+            </div>
+            
+            <div class="item" name="item" onclick='openModal(1)'>
+                <img src="img/5.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>San Bartolomé Ayautla</h3>
+                    <p>Artesanias hechas a mano, Huipil, Blusas, canastas y más.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div> 
+            </div>
+
+            <div class="item" name="item" onclick='openModal(2)'>
+                <img src="img/6t.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>San Juan Bautista Cuicatlán</h3>
+                    <p>Variedad de frutas y verduras frescas.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div> 
+            </div>
+
+            <div class="item" name="item" onclick='openModal(3)'>
+                <img src="img/7.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>San Juan Bautista Cuicatlán</h3>
+                    <p>Recuerdos Artesanales, Bolsas, morrales, etc.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div>      
+            </div>
+
+            <div class="item" name="item" onclick='openModal(4)'>
+                <img src="img/temp1.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>Teotitlán de Flores Magón.</h3>
+                    <p>Agricultores locales, vendiendo sus propias cosechas.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div> 
+            </div>
+
+            <div class="item" name="item" onclick='openModal(5)'>
+                <img src="img/14t.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>Teotitlán de Flores Magón.</h3>
+                    <p>Agricultores locales, vendiendo sus propias cosechas.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div>  
+            </div>
+
+            <div class="item" name="item" onclick='openModal(6)'>
+                <img src="img/15.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>San Antonio Nanahuatípam.</h3>
+                    <p>Comerciantes locales vendiendo carne.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div>   
+            </div>
+
+            <div class="item" name="item" onclick='openModal(7)'>
+                <img src="img/8.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>San Sebastián Zinacatepec.</h3>
+                    <p>Vista exterior del mercado municipal.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas">Ver más</button>
+                </div> 
+            </div>
+
+            <div class="item" name="item" onclick='openModal(8)'>
+                <img src="img/9.jpg" alt="" class="item-img">
+                <div class="item-text">
+                    <h3>San Sebastián Zinacatepec.</h3>
+                    <p>Zona de venta en el interior del mercado.</p>
+                </div>
+                <div class="btn">
+                    <button class="vermas" >Ver más</button>
+                </div> 
+            </div>
+
+            <section class="modal" id='modal'>
+                <div class="todo">
+                    <a href="#" class="cerrar" onclick="closeModal();"><i class="fa fa-times"></i></a>
+                    <div class="pop">
+                        <img id="image">
+                        <div class="infor">
+                            <h2 id="product"></h2>
+                            <h4 id="antes"></h4>	
+                        </div>
+                    </div>		
+                </div>
+            </section>
+    </section>
+
+    <script src="js/modal.js"></script>
