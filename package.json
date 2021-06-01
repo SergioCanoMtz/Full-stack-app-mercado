@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SergioCanoMtz/NodeJs_MySQL.git"
+    "url": "git+https://github.com/SergioCanoMtz/Full-stack-app-mercado.git"
   },
   "keywords": [
     "Nodejs",
@@ -20,9 +20,9 @@
   "author": "Sergio_Cano",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SergioCanoMtz/NodeJs_MySQL/issues"
+    "url": "https://github.com/SergioCanoMtz/Full-stack-app-mercado/issues"
   },
-  "homepage": "https://github.com/SergioCanoMtz/NodeJs_MySQL#readme",
+  "homepage": "https://github.com/SergioCanoMtz/Full-stack-app-mercado#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
