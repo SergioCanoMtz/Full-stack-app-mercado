@@ -1,7 +1,7 @@
 {
-  "name": "nodejsmysql",
+  "name": "Full-stack-app-mercado",
   "version": "1.0.0",
-  "description": "Aplicación completa con MySQL, NodeJS, ExpressJS, CRUD",
+  "description": "Aplicación del mercado con mysql, nodejs, expressjs y más..",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
