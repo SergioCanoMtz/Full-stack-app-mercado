@@ -2,13 +2,27 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const {isLoggedIn} = require('../lib/protect'); 
+const fileupload = require('express-fileupload'); 
+
+const app = express();
+
+app.use(fileupload());
 
 router.get('/add', isLoggedIn, (req, res) => {
     res.render('links/add');
 });
 
 router.post('/add',isLoggedIn, async (req, res) => {
-    const {title, url, description} = req.body;
+    let sampleFile;
+    let uploadPath;
+
+    if(!req.files || Object.keys(req.files).length === 0){
+        return res.status(400).send("No se subieron imagenes");
+    }
+
+    sampleFile = req.files.sampleFile;
+    console.log(sampleFile);
+    /* const {title, url, description} = req.body;
     const newLink = {
         title,
         url,
@@ -17,7 +31,7 @@ router.post('/add',isLoggedIn, async (req, res) => {
     };
     await pool.query('INSERT INTO link set ?', [newLink]);
     req.flash('correcto', 'Link agregado correctamente');
-    res.redirect('/links');
+    res.redirect('/links'); */
 });
 
 router.get('/',isLoggedIn, async (req, res)=>{
