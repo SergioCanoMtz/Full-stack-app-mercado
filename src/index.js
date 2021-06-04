@@ -7,6 +7,9 @@ const sesion = require('express-session');
 const smysql = require('express-mysql-session'); 
 const { database } = require('./keys');
 const passport = require('passport');
+/* const fs = require('fs');
+const multer = require('multer');
+const upload = multer({ dest: 'public/images'}); */
 require('dotenv').config()
 
  //inicializacion 
@@ -51,6 +54,8 @@ app.use((req, res, next) => {
 app.use(require('./routes'));
 app.use(require('./routes/authentication'));
 app.use('/links',require('./routes/links'));
+
+
 
 //public
 app.use(express.static(path.join(__dirname, 'public')));

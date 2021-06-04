@@ -2,41 +2,43 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const {isLoggedIn} = require('../lib/protect'); 
-const fileupload = require('express-fileupload'); 
 
+const path = require('path');
+const fs = require('fs');
+const multer = require('multer');
+const upload = multer({ dest: 'src/public/images'});
+
+/* const fileupload = require('express-fileupload'); 
+app.use(fileupload()); */
 const app = express();
+/* app.use(express.static(path.join(__dirname, 'public'))); */
 
-app.use(fileupload());
 
 router.get('/add', isLoggedIn, (req, res) => {
     res.render('links/add');
 });
 
-router.post('/add',isLoggedIn, async (req, res) => {
-    let sampleFile;
-    let uploadPath;
 
-    if(!req.files || Object.keys(req.files).length === 0){
-        return res.status(400).send("No se subieron imagenes");
-    }
-
-    sampleFile = req.files.sampleFile;
-    console.log(sampleFile);
-    /* const {title, url, description} = req.body;
+router.post('/add',isLoggedIn, upload.single('sampleFile'), async (req, res) => {
+    console.log(req.file);
+    fs.renameSync(req.file.path, req.file.path + '.' + req.file.mimetype.split('/')[1]);
+    const nameImage = req.file.filename + '.' + req.file.mimetype.split('/')[1];
+    const {title, url, description, sampleFile} = req.body;
     const newLink = {
         title,
         url,
         description,
+        image: nameImage,
         user_id: req.user.id
     };
     await pool.query('INSERT INTO link set ?', [newLink]);
     req.flash('correcto', 'Link agregado correctamente');
-    res.redirect('/links'); */
+    res.redirect('/links'); 
 });
 
 router.get('/',isLoggedIn, async (req, res)=>{
     const links = await pool.query('SELECT * FROM link where user_id = ?', [req.user.id]);
-    console.log(links);
+    /* console.log(links); */
     res.render('links/list', {links});
 });
 
