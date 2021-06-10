@@ -64,5 +64,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 //package.json en ves de correrlo normalmen nodemon src/index.js.
 //ahora solo lo corremos con npm run dev
 app.listen(app.get('port'), () => {
-    console.log('Server on port', app.get('port'));
+    console.log('Server on port http://localhost:'+app.get('port'));
 })
