@@ -59,4 +59,8 @@ router.get('/mercados', (req, res) => {
     res.render('mercados')
 })
 
+router.get('/datos', (req, res) =>{
+    res.render('datos')
+})
+
 module.exports = router;
