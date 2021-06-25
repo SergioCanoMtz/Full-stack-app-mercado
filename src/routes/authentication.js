@@ -40,7 +40,6 @@ router.get('/signup', (req, res) =>{
 });
 
 router.post('/signup', (req, res) =>{
-
 });
 
 router.get('/acerca', (req, res) => {
