@@ -42,8 +42,7 @@ router.get('/delete/:id',isLoggedIn, async (req, res) =>{
 
 router.get('/edit/:id',isLoggedIn, async (req, res) =>{
     const { id } = req.params;
-    const links = await pool.query('SELECT * FROM link WHERE id = ?', [id]);
-    
+    const links = await pool.query('SELECT * FROM link WHERE id = ?', [id]);   
     res.render('links/edit', {link: links[0]});
 });
 
