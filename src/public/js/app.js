@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-       
+document.addEventListener('DOMContentLoaded', () => {    
     var evento = document.getElementById('evento');
     evento.addEventListener('click', () => {
         var count = 1;
@@ -11,5 +10,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 17); 
     })
-
 });
