@@ -30,5 +30,4 @@ function closeModal(){
      header.style.background = 'rgba(255,255,255,.2)';
      active.classList.remove('active');
      pie.classList.add('pie-hidden');
-
  }
