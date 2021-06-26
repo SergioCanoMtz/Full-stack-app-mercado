@@ -2,22 +2,13 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const {isLoggedIn} = require('../lib/protect'); 
-
-const path = require('path');
 const fs = require('fs');
 const multer = require('multer');
 const upload = multer({ dest: 'src/public/images'});
 
-/* const fileupload = require('express-fileupload'); 
-app.use(fileupload()); */
-const app = express();
-/* app.use(express.static(path.join(__dirname, 'public'))); */
-
-
 router.get('/add', isLoggedIn, (req, res) => {
     res.render('links/add');
 });
-
 
 router.post('/add',isLoggedIn, upload.single('sampleFile'), async (req, res) => {
     console.log(req.file);
